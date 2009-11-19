@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Edit Category Slug
-Version: 0.3
+Version: 0.4-trunk
 Plugin URI: http://uplift.ru/projects/
 Description: Allows to specify or edit a category slug in WordPress MU.
 Author: Sergey Biryukov
