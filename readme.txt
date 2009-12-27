@@ -1,4 +1,4 @@
-=== Edit Category Slug ===
+=== Edit Category Slug (WPMU) ===
 Contributors: SergeyBiryukov
 Tags: category, slug, wpmu
 Requires at least: 2.7
