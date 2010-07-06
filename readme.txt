@@ -1,6 +1,6 @@
 === Edit Category Slug (WPMU) ===
 Contributors: SergeyBiryukov
-Tags: category, slug, wpmu
+Tags: admin, category, slug, wpmu
 Requires at least: 2.7
 Tested up to: 2.9.1
 Stable tag: 0.3
@@ -10,3 +10,14 @@ Allows to specify or edit a category slug in WordPress MU.
 == Description ==
 
 Allows to specify or edit a category slug in WordPress MU.
+
+== Changelog ==
+
+= 0.3 =
+* Added support for WordPress MU 2.9
+
+= 0.2 =
+* Added support for WordPress MU 2.7 and 2.8
+
+= 0.1 =
+* Initial release
