@@ -9,19 +9,15 @@ Author URI: http://sergeybiryukov.ru/
 */
 
 function ecs_display_slug_row($category) {
-	$label = function_exists('_x') ? _x('Slug', 'Taxonomy Slug') : __('Category Slug');
+	$label = function_exists('_x') && function_exists('_ex') ? _x('Slug', 'Taxonomy Slug') : __('Category Slug');
 	$category_slug = apply_filters('editable_slug', $category->slug);
 	$slug = function_exists('esc_attr') ? esc_attr($category_slug) : attribute_escape($category_slug);
-
-	if ( version_compare( get_bloginfo('version'), '3.0', '>=' ) )
-		$form_id = array( 'add' => 'addtag', 'edit' => 'edittag' );
-	else
-		$form_id = array( 'add' => 'addcat', 'edit' => 'editcat' );
 ?>
 <script type="text/javascript">
 //<![CDATA[
-var form_addcat = document.getElementById('<?php echo $form_id['add']; ?>');
-var form_editcat = document.getElementById('<?php echo $form_id['edit']; ?>');
+var form_addcat = document.getElementById('addtag') != null ? document.getElementById('addtag') : document.getElementById('addcat');
+var form_editcat = document.getElementById('edittag') != null ? document.getElementById('edittag') : document.getElementById('editcat');
+
 var slugRow = '<tr class="form-field">' +
 	'<th scope="row" valign="top"><label for="category_nicename"><?php echo $label; ?></label></th>' +
 	'<td><input name="category_nicename" id="category_nicename" type="text" value="<?php echo $slug; ?>" size="40" /><br />' +
@@ -32,8 +28,11 @@ var slugDiv = '<div class="form-field">' +
 	'<input name="category_nicename" id="category_nicename" type="text" value="" size="40" />' +
 	'<p><?php _e("The &#8220;slug&#8221; is the URL-friendly version of the name. It is usually all lowercase and contains only letters, numbers, and hyphens."); ?></p>' +
 	'</div>';
-if ( form_addcat != null )
+
+if ( form_addcat != null ) {
 	form_addcat.innerHTML = form_addcat.innerHTML.replace(/<\/div>/i, '</div>' + slugDiv);
+	form_addcat.innerHTML = form_addcat.innerHTML.replace(/<\/tr>/i, '</tr>' + slugRow);
+}
 if ( form_editcat != null )
 	form_editcat.innerHTML = form_editcat.innerHTML.replace(/<\/tr>/i, '</tr>' + slugRow);
 //]]>
