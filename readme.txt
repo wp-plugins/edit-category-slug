@@ -11,6 +11,11 @@ Allows to specify or edit a category slug in WordPress MU.
 
 Allows to specify or edit a category slug in WordPress MU.
 
+== Installation ==
+
+1. Upload `edit-category-slug` folder to the `/wp-content/plugins/` directory.
+2. Activate the plugin through the 'Plugins' menu in WordPress.
+
 == Changelog ==
 
 = 0.2 =
