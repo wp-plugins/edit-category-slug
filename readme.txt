@@ -1,15 +1,15 @@
-=== Edit Category Slug (WPMU) ===
+=== Edit Category Slug (Multisite) ===
 Contributors: SergeyBiryukov
-Tags: admin, category, slug, wpmu
+Tags: admin, category, slug, wpmu, multisite
 Requires at least: 2.6
 Tested up to: 3.0
 Stable tag: 0.4
 
-Allows to specify or edit a category slug in WordPress MU.
+Allows to specify or edit a category slug in WordPress Multisite.
 
 == Description ==
 
-Allows to specify or edit a category slug in WordPress MU.
+Allows to specify or edit a category slug in WordPress Multisite.
 
 == Installation ==
 
