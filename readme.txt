@@ -2,7 +2,7 @@
 Contributors: SergeyBiryukov
 Tags: admin, category, slug, wpmu, multisite
 Requires at least: 2.6
-Tested up to: 3.0
+Tested up to: 3.0.2
 Stable tag: 0.4
 
 Allows to specify or edit a category slug in WordPress Multisite.
