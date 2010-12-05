@@ -49,7 +49,7 @@ function ecs_edit_slug($cat_id) {
 		else
 			$category_nicename = sanitize_title($_POST['name']);
 
-		$wpdb->update( $wpdb->terms, array( 'slug' => $_POST['category_nicename'] ), array( 'term_id' => $cat_id ) );
+		$wpdb->update( $wpdb->terms, array( 'slug' => $category_nicename ), array( 'term_id' => $cat_id ) );
 	}
 }
 add_action('edit_category', 'ecs_edit_slug');
