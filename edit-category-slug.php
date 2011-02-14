@@ -10,7 +10,7 @@ Author URI: http://sergeybiryukov.ru/
 
 function ecs_display_slug_row($category) {
 	$label = function_exists('_x') && function_exists('_ex') ? _x('Slug', 'Taxonomy Slug') : __('Category Slug');
-	$category_slug = apply_filters('editable_slug', $category->slug);
+	$category_slug = isset($category->slug) ? apply_filters('editable_slug', $category->slug) : '';
 	$slug = function_exists('esc_attr') ? esc_attr($category_slug) : attribute_escape($category_slug);
 ?>
 <script type="text/javascript">
